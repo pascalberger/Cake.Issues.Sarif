@@ -1,2 +1,41 @@
-# Cake.Issues.Sarif
-Addin for providing issues from a SARIF compatible file to Cake.Issues Addin 
+# SARIF support for Cake.Issues Addin
+
+This addin for the Cake Build Automation System allows you to read issues in [SARIF](https://sarifweb.azurewebsites.net/)
+format using the [Cake Issues addin](https://github.com/cake-contrib/Cake.Issues).
+
+For more information about this add-in see the [Cake.Issues website](https://cakeissues.net)
+and for general information about the Cake build automation system see the [Cake website](http://cakebuild.net)
+
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/cake-contrib/Cake.Issues.Sarif/blob/develop/LICENSE)
+
+## Information
+
+| | Stable | Pre-release |
+|:--:|:--:|:--:|
+|GitHub Release|-|[![GitHub release](https://img.shields.io/github/release/cake-contrib/Cake.Issues.Sarif.svg)](https://github.com/cake-contrib/Cake.Issues.Sarif/releases/latest)|
+|NuGet|[![NuGet](https://img.shields.io/nuget/v/Cake.Issues.Sarif.svg)](https://www.nuget.org/packages/Cake.Issues.Sarif)|[![NuGet](https://img.shields.io/nuget/vpre/Cake.Issues.Sarif.svg)](https://www.nuget.org/packages/Cake.Issues.Sarif)|
+
+## Build Status
+
+| | Develop | Master |
+|:--:|:--:|:--:|
+|AppVeyor Windows|[![Build status](https://ci.appveyor.com/api/projects/status/74fdm3potexq48ys/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-issues-sarif/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/74fdm3potexq48ys/branch/master?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-issues-sarif/branch/master)|
+|Azure DevOps Windows|[![Build Status](https://dev.azure.com/cake-contrib/Cake.Issues.Sarif/_apis/build/status/cake-contrib.Cake.Issues.Sarif?branchName=develop&jobName=Windows)](https://dev.azure.com/cake-contrib/Cake.Issues.Sarif/_build/latest?definitionId=33&branchName=develop)|[![Build Status](https://dev.azure.com/cake-contrib/Cake.Issues.Sarif/_apis/build/status/cake-contrib.Cake.Issues.Sarif?branchName=master&jobName=Windows)](https://dev.azure.com/cake-contrib/Cake.Issues.Sarif/_build/latest?definitionId=33&branchName=master)|
+
+## Code Coverage
+
+[![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.Issues.Sarif/badge.svg?branch=develop)](https://coveralls.io/github/cake-contrib/Cake.Issues.Sarif?branch=develop)
+
+## Quick Links
+
+- [Documentation](https://cakeissues.net)
+
+## Chat Room
+
+Come join in the conversation about this addin in our Gitter Chat Room
+
+[![Join the chat at https://gitter.im/cake-contrib/Lobby](https://badges.gitter.im/cake-contrib/Lobby.svg)](https://gitter.im/cake-contrib/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+## Contributing
+
+Contributions are welcome. See [Contribution Guidelines](CONTRIBUTING.md).
