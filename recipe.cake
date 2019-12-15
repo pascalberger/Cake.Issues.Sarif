@@ -1,4 +1,4 @@
-#load nuget:?package=Cake.Recipe&version=1.0.0
+#load nuget:?package=Cake.Recipe&version=1.1.1
 
 Environment.SetVariableNames();
 
@@ -14,6 +14,14 @@ BuildParameters.SetParameters(
     shouldRunCodecov: true,
     shouldRunGitVersion: true);
 
+BuildParameters.PackageSources.Add(
+    new PackageSourceData(
+        Context,
+        "GPR",
+        "https://nuget.pkg.github.com/cake-contrib/index.json",
+        FeedType.NuGet,
+        false));
+
 BuildParameters.PrintParameters(Context);
 
 ToolSettings.SetToolSettings(
@@ -22,5 +30,8 @@ ToolSettings.SetToolSettings(
     testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* -[Cake.Issues]* -[Cake.Issues.Testing]* -[Shouldly]* -[Newtonsoft.Json]*",
     testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
     testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs");
+
+BuildParameters.Tasks.PublishPreReleasePackagesTask.IsDependentOn(BuildParameters.Tasks.PublishGitHubReleaseTask);
+BuildParameters.Tasks.PublishReleasePackagesTask.IsDependentOn(BuildParameters.Tasks.PublishGitHubReleaseTask);
 
 Build.RunDotNetCore();
